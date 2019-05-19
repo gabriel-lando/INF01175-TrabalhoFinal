@@ -1,0 +1,370 @@
+
+
+================================================================
+== Vivado HLS Report for 'matrix_multiply_alt2'
+================================================================
+* Date:           Wed Dec 19 00:31:23 2018
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        proj_matrix_multiply
+* Solution:       solution1
+* Product family: kintex7
+* Target device:  xc7k70tfbv676-3
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   4.00|     4.123|        0.50|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   44|   44|   44|   44|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                                    |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |              Loop Name             | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- a_col_loop_a_row_loop_b_col_loop  |   42|   42|        17|          1|          1|    27|    yes   |
+        +------------------------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 17
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 19
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 17, States = { 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	19  / (exitcond_flatten1)
+	3  / (!exitcond_flatten1)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	2  / true
+19 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.83>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%sum_mult = alloca [9 x float], align 4" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312]   --->   Operation 20 'alloca' 'sum_mult' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_1 : Operation 21 [1/1] (0.83ns)   --->   "br label %1" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:318]   --->   Operation 21 'br' <Predicate = true> <Delay = 0.83>
+
+State 2 <SV = 1> <Delay = 2.55>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%indvar_flatten1 = phi i5 [ 0, %0 ], [ %indvar_flatten_next1, %ifBlock ]"   --->   Operation 22 'phi' 'indvar_flatten1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%Col_assign_2 = phi i2 [ 0, %0 ], [ %tmp_i_i_mid2_v, %ifBlock ]" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324]   --->   Operation 23 'phi' 'Col_assign_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%indvar_flatten = phi i4 [ 0, %0 ], [ %indvar_flatten_next, %ifBlock ]"   --->   Operation 24 'phi' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%Row_assign = phi i2 [ 0, %0 ], [ %tmp_11_mid2, %ifBlock ]" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:332]   --->   Operation 25 'phi' 'Row_assign' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%Col_assign = phi i2 [ 0, %0 ], [ %c, %ifBlock ]"   --->   Operation 26 'phi' 'Col_assign' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.82ns)   --->   "%exitcond_flatten1 = icmp eq i5 %indvar_flatten1, -5"   --->   Operation 27 'icmp' 'exitcond_flatten1' <Predicate = true> <Delay = 0.82> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 27, i64 27, i64 27)"   --->   Operation 28 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (1.04ns)   --->   "%indvar_flatten_next1 = add i5 %indvar_flatten1, 1"   --->   Operation 29 'add' 'indvar_flatten_next1' <Predicate = true> <Delay = 1.04> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "br i1 %exitcond_flatten1, label %7, label %.reset7"   --->   Operation 30 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.80ns)   --->   "%k = add i2 %Col_assign_2, 1" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:318]   --->   Operation 31 'add' 'k' <Predicate = (!exitcond_flatten1)> <Delay = 0.80> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 32 [1/1] (0.81ns)   --->   "%exitcond_flatten = icmp eq i4 %indvar_flatten, -7"   --->   Operation 32 'icmp' 'exitcond_flatten' <Predicate = (!exitcond_flatten1)> <Delay = 0.81> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 33 [1/1] (0.46ns)   --->   "%Row_assign_mid = select i1 %exitcond_flatten, i2 0, i2 %Row_assign" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:332]   --->   Operation 33 'select' 'Row_assign_mid' <Predicate = (!exitcond_flatten1)> <Delay = 0.46> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 34 [1/1] (0.47ns)   --->   "%tmp_mid1 = icmp eq i2 %k, 0" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:330]   --->   Operation 34 'icmp' 'tmp_mid1' <Predicate = (!exitcond_flatten1)> <Delay = 0.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 35 [1/1] (0.47ns)   --->   "%tmp3 = icmp eq i2 %Col_assign_2, 0" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:330]   --->   Operation 35 'icmp' 'tmp3' <Predicate = (!exitcond_flatten1)> <Delay = 0.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 36 [1/1] (0.46ns)   --->   "%tmp_mid2 = select i1 %exitcond_flatten, i1 %tmp_mid1, i1 %tmp3" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:330]   --->   Operation 36 'select' 'tmp_mid2' <Predicate = (!exitcond_flatten1)> <Delay = 0.46> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 37 [1/1] (0.47ns)   --->   "%tmp_mid1_12 = icmp eq i2 %k, -2" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:333]   --->   Operation 37 'icmp' 'tmp_mid1_12' <Predicate = (!exitcond_flatten1)> <Delay = 0.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 38 [1/1] (0.47ns)   --->   "%tmp_2 = icmp eq i2 %Col_assign_2, -2" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:333]   --->   Operation 38 'icmp' 'tmp_2' <Predicate = (!exitcond_flatten1)> <Delay = 0.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 39 [1/1] (0.46ns)   --->   "%tmp_mid2_13 = select i1 %exitcond_flatten, i1 %tmp_mid1_12, i1 %tmp_2" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:333]   --->   Operation 39 'select' 'tmp_mid2_13' <Predicate = (!exitcond_flatten1)> <Delay = 0.46> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 40 [1/1] (0.46ns)   --->   "%tmp_i_i_mid2_v = select i1 %exitcond_flatten, i2 %k, i2 %Col_assign_2" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324]   --->   Operation 40 'select' 'tmp_i_i_mid2_v' <Predicate = (!exitcond_flatten1)> <Delay = 0.46> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 41 [1/1] (0.00ns) (grouped into LUT with out node exitcond_mid)   --->   "%not_exitcond_flatten = xor i1 %exitcond_flatten, true" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320]   --->   Operation 41 'xor' 'not_exitcond_flatten' <Predicate = (!exitcond_flatten1)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 42 [1/1] (0.47ns)   --->   "%exitcond = icmp eq i2 %Col_assign, -1" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320]   --->   Operation 42 'icmp' 'exitcond' <Predicate = (!exitcond_flatten1)> <Delay = 0.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 43 [1/1] (0.45ns) (out node of the LUT)   --->   "%exitcond_mid = and i1 %exitcond, %not_exitcond_flatten" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320]   --->   Operation 43 'and' 'exitcond_mid' <Predicate = (!exitcond_flatten1)> <Delay = 0.45> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 44 [1/1] (0.80ns)   --->   "%r = add i2 %Row_assign_mid, 1" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:319]   --->   Operation 44 'add' 'r' <Predicate = (!exitcond_flatten1)> <Delay = 0.80> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 45 [1/1] (0.00ns) (grouped into LUT with out node Col_assign_mid2)   --->   "%tmp_18 = or i1 %exitcond_mid, %exitcond_flatten" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320]   --->   Operation 45 'or' 'tmp_18' <Predicate = (!exitcond_flatten1)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 46 [1/1] (0.46ns) (out node of the LUT)   --->   "%Col_assign_mid2 = select i1 %tmp_18, i2 0, i2 %Col_assign" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320]   --->   Operation 46 'select' 'Col_assign_mid2' <Predicate = (!exitcond_flatten1)> <Delay = 0.46> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 47 [1/1] (0.46ns)   --->   "%tmp_11_mid2 = select i1 %exitcond_mid, i2 %r, i2 %Row_assign_mid" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:332]   --->   Operation 47 'select' 'tmp_11_mid2' <Predicate = (!exitcond_flatten1)> <Delay = 0.46> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "br i1 %tmp_mid2, label %2, label %3" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:330]   --->   Operation 48 'br' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "br i1 %tmp_mid2_13, label %4, label %5" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:333]   --->   Operation 49 'br' <Predicate = (!exitcond_flatten1 & !tmp_mid2)> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.80ns)   --->   "%c = add i2 %Col_assign_mid2, 1" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320]   --->   Operation 50 'add' 'c' <Predicate = (!exitcond_flatten1)> <Delay = 0.80> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 51 [1/1] (0.96ns)   --->   "%indvar_flatten_op = add i4 %indvar_flatten, 1"   --->   Operation 51 'add' 'indvar_flatten_op' <Predicate = (!exitcond_flatten1)> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 52 [1/1] (0.48ns)   --->   "%indvar_flatten_next = select i1 %exitcond_flatten, i4 1, i4 %indvar_flatten_op"   --->   Operation 52 'select' 'indvar_flatten_next' <Predicate = (!exitcond_flatten1)> <Delay = 0.48> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 3.10>
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%tmp_i_i_mid2_cast = zext i2 %tmp_i_i_mid2_v to i5" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324]   --->   Operation 53 'zext' 'tmp_i_i_mid2_cast' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%tmp_s = call i4 @_ssdm_op_BitConcatenate.i4.i2.i2(i2 %tmp_i_i_mid2_v, i2 0)" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324]   --->   Operation 54 'bitconcatenate' 'tmp_s' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%p_shl1_cast = zext i4 %tmp_s to i5" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:325]   --->   Operation 55 'zext' 'p_shl1_cast' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_3 : Operation 56 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_17 = sub i5 %p_shl1_cast, %tmp_i_i_mid2_cast" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:325]   --->   Operation 56 'sub' 'tmp_17' <Predicate = (!exitcond_flatten1)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.90> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 57 [1/1] (0.00ns)   --->   "%tmp_11_mid2_cast = zext i2 %tmp_11_mid2 to i5" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:332]   --->   Operation 57 'zext' 'tmp_11_mid2_cast' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%tmp = call i4 @_ssdm_op_BitConcatenate.i4.i2.i2(i2 %tmp_11_mid2, i2 0)" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:332]   --->   Operation 58 'bitconcatenate' 'tmp' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_3 : Operation 59 [1/1] (0.00ns)   --->   "%p_shl_cast = zext i4 %tmp to i5" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324]   --->   Operation 59 'zext' 'p_shl_cast' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_3 : Operation 60 [1/1] (0.96ns)   --->   "%tmp_19 = sub i5 %p_shl_cast, %tmp_11_mid2_cast" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324]   --->   Operation 60 'sub' 'tmp_19' <Predicate = (!exitcond_flatten1)> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 61 [1/1] (1.04ns)   --->   "%tmp_20 = add i5 %tmp_i_i_mid2_cast, %tmp_19" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324]   --->   Operation 61 'add' 'tmp_20' <Predicate = (!exitcond_flatten1)> <Delay = 1.04> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_28_cast = zext i5 %tmp_20 to i64" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324]   --->   Operation 62 'zext' 'tmp_28_cast' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%A_addr = getelementptr [9 x float]* %A, i64 0, i64 %tmp_28_cast" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324]   --->   Operation 63 'getelementptr' 'A_addr' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_3 : Operation 64 [2/2] (1.09ns)   --->   "%cast_in_a = load float* %A_addr, align 4" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324]   --->   Operation 64 'load' 'cast_in_a' <Predicate = (!exitcond_flatten1)> <Delay = 1.09> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%tmp_i_i4_cast = zext i2 %Col_assign_mid2 to i5" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:325]   --->   Operation 65 'zext' 'tmp_i_i4_cast' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_3 : Operation 66 [1/1] (1.81ns) (root node of TernaryAdder)   --->   "%tmp_21 = add i5 %tmp_i_i4_cast, %tmp_17" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:325]   --->   Operation 66 'add' 'tmp_21' <Predicate = (!exitcond_flatten1)> <Delay = 1.81> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.90> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 67 [1/1] (0.00ns)   --->   "%tmp_29_cast = sext i5 %tmp_21 to i64" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:325]   --->   Operation 67 'sext' 'tmp_29_cast' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_3 : Operation 68 [1/1] (0.00ns)   --->   "%B_addr = getelementptr [9 x float]* %B, i64 0, i64 %tmp_29_cast" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:325]   --->   Operation 68 'getelementptr' 'B_addr' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_3 : Operation 69 [1/1] (1.04ns)   --->   "%tmp_22 = add i5 %tmp_i_i4_cast, %tmp_19" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335]   --->   Operation 69 'add' 'tmp_22' <Predicate = (!exitcond_flatten1)> <Delay = 1.04> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 70 [2/2] (1.09ns)   --->   "%cast_in_b = load float* %B_addr, align 4" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:325]   --->   Operation 70 'load' 'cast_in_b' <Predicate = (!exitcond_flatten1)> <Delay = 1.09> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+
+State 4 <SV = 3> <Delay = 1.09>
+ST_4 : Operation 71 [1/2] (1.09ns)   --->   "%cast_in_a = load float* %A_addr, align 4" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324]   --->   Operation 71 'load' 'cast_in_a' <Predicate = (!exitcond_flatten1)> <Delay = 1.09> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_4 : Operation 72 [1/2] (1.09ns)   --->   "%cast_in_b = load float* %B_addr, align 4" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:325]   --->   Operation 72 'load' 'cast_in_b' <Predicate = (!exitcond_flatten1)> <Delay = 1.09> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+
+State 5 <SV = 4> <Delay = 3.33>
+ST_5 : Operation 73 [4/4] (3.33ns)   --->   "%mult = fmul float %cast_in_a, %cast_in_b" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:326]   --->   Operation 73 'fmul' 'mult' <Predicate = (!exitcond_flatten1)> <Delay = 3.33> <Core = "FMul">   --->   Core 104 'FMul' <Latency = 3> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 3.33>
+ST_6 : Operation 74 [3/4] (3.33ns)   --->   "%mult = fmul float %cast_in_a, %cast_in_b" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:326]   --->   Operation 74 'fmul' 'mult' <Predicate = (!exitcond_flatten1)> <Delay = 3.33> <Core = "FMul">   --->   Core 104 'FMul' <Latency = 3> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 3.33>
+ST_7 : Operation 75 [2/4] (3.33ns)   --->   "%mult = fmul float %cast_in_a, %cast_in_b" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:326]   --->   Operation 75 'fmul' 'mult' <Predicate = (!exitcond_flatten1)> <Delay = 3.33> <Core = "FMul">   --->   Core 104 'FMul' <Latency = 3> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 3.33>
+ST_8 : Operation 76 [1/4] (3.33ns)   --->   "%mult = fmul float %cast_in_a, %cast_in_b" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:326]   --->   Operation 76 'fmul' 'mult' <Predicate = (!exitcond_flatten1)> <Delay = 3.33> <Core = "FMul">   --->   Core 104 'FMul' <Latency = 3> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 1.09>
+ST_9 : Operation 77 [1/1] (0.00ns)   --->   "%tmp_30_cast = zext i5 %tmp_22 to i64" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335]   --->   Operation 77 'zext' 'tmp_30_cast' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_9 : Operation 78 [1/1] (0.00ns)   --->   "%C_addr = getelementptr [9 x float]* %C, i64 0, i64 %tmp_30_cast" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335]   --->   Operation 78 'getelementptr' 'C_addr' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_9 : Operation 79 [1/1] (0.00ns)   --->   "%sum_mult_addr = getelementptr [9 x float]* %sum_mult, i64 0, i64 %tmp_30_cast" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:332]   --->   Operation 79 'getelementptr' 'sum_mult_addr' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_9 : Operation 80 [2/2] (1.09ns)   --->   "%sum_mult_load = load float* %sum_mult_addr, align 4" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335]   --->   Operation 80 'load' 'sum_mult_load' <Predicate = (!tmp_mid2)> <Delay = 1.09> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_9 : Operation 81 [1/1] (1.09ns)   --->   "store float %mult, float* %sum_mult_addr, align 4" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:332]   --->   Operation 81 'store' <Predicate = (tmp_mid2)> <Delay = 1.09> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+
+State 10 <SV = 9> <Delay = 4.12>
+ST_10 : Operation 82 [1/2] (1.09ns)   --->   "%sum_mult_load = load float* %sum_mult_addr, align 4" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335]   --->   Operation 82 'load' 'sum_mult_load' <Predicate = (!tmp_mid2)> <Delay = 1.09> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_10 : Operation 83 [8/8] (3.02ns)   --->   "%tmp_13 = fadd float %sum_mult_load, %mult" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335]   --->   Operation 83 'fadd' 'tmp_13' <Predicate = (!tmp_mid2)> <Delay = 3.02> <Core = "FAddSub">   --->   Core 103 'FAddSub' <Latency = 7> <II = 1> <Delay = 3.02> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 3.02>
+ST_11 : Operation 84 [7/8] (3.02ns)   --->   "%tmp_13 = fadd float %sum_mult_load, %mult" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335]   --->   Operation 84 'fadd' 'tmp_13' <Predicate = (!tmp_mid2)> <Delay = 3.02> <Core = "FAddSub">   --->   Core 103 'FAddSub' <Latency = 7> <II = 1> <Delay = 3.02> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 3.02>
+ST_12 : Operation 85 [6/8] (3.02ns)   --->   "%tmp_13 = fadd float %sum_mult_load, %mult" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335]   --->   Operation 85 'fadd' 'tmp_13' <Predicate = (!tmp_mid2)> <Delay = 3.02> <Core = "FAddSub">   --->   Core 103 'FAddSub' <Latency = 7> <II = 1> <Delay = 3.02> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 3.02>
+ST_13 : Operation 86 [5/8] (3.02ns)   --->   "%tmp_13 = fadd float %sum_mult_load, %mult" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335]   --->   Operation 86 'fadd' 'tmp_13' <Predicate = (!tmp_mid2)> <Delay = 3.02> <Core = "FAddSub">   --->   Core 103 'FAddSub' <Latency = 7> <II = 1> <Delay = 3.02> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 3.02>
+ST_14 : Operation 87 [4/8] (3.02ns)   --->   "%tmp_13 = fadd float %sum_mult_load, %mult" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335]   --->   Operation 87 'fadd' 'tmp_13' <Predicate = (!tmp_mid2)> <Delay = 3.02> <Core = "FAddSub">   --->   Core 103 'FAddSub' <Latency = 7> <II = 1> <Delay = 3.02> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 3.02>
+ST_15 : Operation 88 [3/8] (3.02ns)   --->   "%tmp_13 = fadd float %sum_mult_load, %mult" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335]   --->   Operation 88 'fadd' 'tmp_13' <Predicate = (!tmp_mid2)> <Delay = 3.02> <Core = "FAddSub">   --->   Core 103 'FAddSub' <Latency = 7> <II = 1> <Delay = 3.02> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 3.02>
+ST_16 : Operation 89 [2/8] (3.02ns)   --->   "%tmp_13 = fadd float %sum_mult_load, %mult" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335]   --->   Operation 89 'fadd' 'tmp_13' <Predicate = (!tmp_mid2)> <Delay = 3.02> <Core = "FAddSub">   --->   Core 103 'FAddSub' <Latency = 7> <II = 1> <Delay = 3.02> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 4.12>
+ST_17 : Operation 90 [1/8] (3.02ns)   --->   "%tmp_13 = fadd float %sum_mult_load, %mult" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335]   --->   Operation 90 'fadd' 'tmp_13' <Predicate = (!tmp_mid2)> <Delay = 3.02> <Core = "FAddSub">   --->   Core 103 'FAddSub' <Latency = 7> <II = 1> <Delay = 3.02> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 91 [1/1] (1.09ns)   --->   "store float %tmp_13, float* %sum_mult_addr, align 4" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:338]   --->   Operation 91 'store' <Predicate = (!tmp_mid2 & !tmp_mid2_13)> <Delay = 1.09> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+
+State 18 <SV = 17> <Delay = 1.09>
+ST_18 : Operation 92 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([33 x i8]* @a_col_loop_a_row_loo)"   --->   Operation 92 'specloopname' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_18 : Operation 93 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([22 x i8]* @a_row_loop_b_col_loo)"   --->   Operation 93 'specloopname' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_18 : Operation 94 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str3) nounwind" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320]   --->   Operation 94 'specloopname' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_18 : Operation 95 [1/1] (0.00ns)   --->   "%tmp_14 = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str3)" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320]   --->   Operation 95 'specregionbegin' 'tmp_14' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_18 : Operation 96 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str7) nounwind" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:321]   --->   Operation 96 'specpipeline' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_18 : Operation 97 [1/1] (0.00ns)   --->   "br label %6"   --->   Operation 97 'br' <Predicate = (!tmp_mid2 & !tmp_mid2_13)> <Delay = 0.00>
+ST_18 : Operation 98 [1/1] (1.09ns)   --->   "store float %tmp_13, float* %C_addr, align 4" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335]   --->   Operation 98 'store' <Predicate = (!tmp_mid2 & tmp_mid2_13)> <Delay = 1.09> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_18 : Operation 99 [1/1] (0.00ns)   --->   "br label %6" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:336]   --->   Operation 99 'br' <Predicate = (!tmp_mid2 & tmp_mid2_13)> <Delay = 0.00>
+ST_18 : Operation 100 [1/1] (0.00ns)   --->   "br label %ifBlock"   --->   Operation 100 'br' <Predicate = (!tmp_mid2)> <Delay = 0.00>
+ST_18 : Operation 101 [1/1] (0.00ns)   --->   "br label %ifBlock" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:333]   --->   Operation 101 'br' <Predicate = (tmp_mid2)> <Delay = 0.00>
+ST_18 : Operation 102 [1/1] (0.00ns)   --->   "%empty_11 = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str3, i32 %tmp_14)" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:340]   --->   Operation 102 'specregionend' 'empty_11' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_18 : Operation 103 [1/1] (0.00ns)   --->   "br label %1"   --->   Operation 103 'br' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+
+State 19 <SV = 2> <Delay = 0.00>
+ST_19 : Operation 104 [1/1] (0.00ns)   --->   "ret void" [D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:343]   --->   Operation 104 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 0.5ns.
+
+ <State 1>: 0.838ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('indvar_flatten1') with incoming values : ('indvar_flatten_next1') [7]  (0.838 ns)
+
+ <State 2>: 2.55ns
+The critical path consists of the following:
+	'phi' operation ('indvar_flatten') with incoming values : ('indvar_flatten_next') [9]  (0 ns)
+	'icmp' operation ('exitcond_flatten') [19]  (0.816 ns)
+	'select' operation ('Row_assign_mid', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:332) [20]  (0.464 ns)
+	'add' operation ('r', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:319) [35]  (0.806 ns)
+	'select' operation ('tmp_11_mid2', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:332) [39]  (0.464 ns)
+
+ <State 3>: 3.11ns
+The critical path consists of the following:
+	'sub' operation ('tmp_19', D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324) [43]  (0.966 ns)
+	'add' operation ('tmp_20', D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324) [44]  (1.05 ns)
+	'getelementptr' operation ('A_addr', D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324) [46]  (0 ns)
+	'load' operation ('cast_in_a', D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324) on array 'A' [50]  (1.09 ns)
+
+ <State 4>: 1.09ns
+The critical path consists of the following:
+	'load' operation ('cast_in_a', D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324) on array 'A' [50]  (1.09 ns)
+
+ <State 5>: 3.33ns
+The critical path consists of the following:
+	'fmul' operation ('mult', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:326) [60]  (3.33 ns)
+
+ <State 6>: 3.33ns
+The critical path consists of the following:
+	'fmul' operation ('mult', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:326) [60]  (3.33 ns)
+
+ <State 7>: 3.33ns
+The critical path consists of the following:
+	'fmul' operation ('mult', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:326) [60]  (3.33 ns)
+
+ <State 8>: 3.33ns
+The critical path consists of the following:
+	'fmul' operation ('mult', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:326) [60]  (3.33 ns)
+
+ <State 9>: 1.09ns
+The critical path consists of the following:
+	'getelementptr' operation ('sum_mult_addr', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:332) [58]  (0 ns)
+	'load' operation ('sum_mult_load', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335) on array 'sum_mult', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312 [63]  (1.09 ns)
+
+ <State 10>: 4.12ns
+The critical path consists of the following:
+	'load' operation ('sum_mult_load', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335) on array 'sum_mult', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312 [63]  (1.09 ns)
+	'fadd' operation ('tmp_13', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335) [64]  (3.03 ns)
+
+ <State 11>: 3.03ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_13', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335) [64]  (3.03 ns)
+
+ <State 12>: 3.03ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_13', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335) [64]  (3.03 ns)
+
+ <State 13>: 3.03ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_13', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335) [64]  (3.03 ns)
+
+ <State 14>: 3.03ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_13', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335) [64]  (3.03 ns)
+
+ <State 15>: 3.03ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_13', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335) [64]  (3.03 ns)
+
+ <State 16>: 3.03ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_13', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335) [64]  (3.03 ns)
+
+ <State 17>: 4.12ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_13', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335) [64]  (3.03 ns)
+	'store' operation (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:338) of variable 'tmp_13', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335 on array 'sum_mult', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312 [67]  (1.09 ns)
+
+ <State 18>: 1.09ns
+The critical path consists of the following:
+	'store' operation (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335) of variable 'tmp_13', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335 on array 'C' [70]  (1.09 ns)
+
+ <State 19>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

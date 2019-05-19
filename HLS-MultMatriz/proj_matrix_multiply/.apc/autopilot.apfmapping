@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="matrix_multiply.cpp" path="D:\Gabriel\Documents\Xilinx\matrix_multiply\matrix_multiply.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="matrix_multiply_tb.cpp" path="D:\Gabriel\Documents\Xilinx\matrix_multiply\matrix_multiply_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

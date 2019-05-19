@@ -1,0 +1,30 @@
+
+
+NET "clk" LOC = B8;
+NET "rst" LOC = A7;
+NET "btn_prev" LOC = C11;
+NET "btn_next" LOC = G12;
+NET "cath_out[7]" LOC = L14;
+NET "cath_out[6]" LOC = H12;
+NET "cath_out[5]" LOC = N14;
+NET "cath_out[4]" LOC = N11;
+NET "cath_out[3]" LOC = P12;
+NET "cath_out[2]" LOC = L13;
+NET "cath_out[1]" LOC = M12;
+NET "cath_out[0]" LOC = N13;
+
+
+NET "display_out[3]" LOC = K14;
+NET "display_out[2]" LOC = M13;
+NET "display_out[1]" LOC = J12;
+NET "display_out[0]" LOC = F12;
+
+
+NET "swt_val[2]" LOC = K3;
+NET "swt_val[1]" LOC = L3;
+NET "swt_val[0]" LOC = P11;
+NET "btn_set" LOC = M4;
+
+# PlanAhead Generated physical constraints 
+
+NET "swt_val[3]" LOC = B4;

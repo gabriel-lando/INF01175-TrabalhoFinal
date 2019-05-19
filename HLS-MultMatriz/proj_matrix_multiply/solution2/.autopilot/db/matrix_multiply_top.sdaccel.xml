@@ -1,0 +1,176 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'matrix_multiply_top'" level="0">
+<item name = "Date">Wed Dec 19 00:32:46 2018
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">proj_matrix_multiply</item>
+<item name = "Solution">solution2</item>
+<item name = "Product family">kintex7</item>
+<item name = "Target device">xc7k70tfbv676-3</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Target clock period (ns)">1.00</item>
+<item name = "Clock uncertainty (ns)">0.13</item>
+<item name = "Target initiation interval">4294967295</item>
+<item name = "Estimated clock period (ns)">1.534</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">57, 57, 51, 51, function</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_matrix_multiply_top_1_fu_482">matrix_multiply_top_1, 45, 45, 5, 5, function</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 4</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">0, 12, 6643, 3587</column>
+<column name="Memory">4, -, 0, 0</column>
+<column name="Multiplexer">-, -, -, 685</column>
+<column name="Register">-, -, 470, -</column>
+<specialColumn name="Available">270, 240, 84400, 42200</specialColumn>
+<specialColumn name="Utilization (%)">1, 5, 8, 10</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="grp_matrix_multiply_top_1_fu_482">matrix_multiply_top_1, 0, 12, 6643, 3587</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="a_i_U">matrix_multiply_tdEe, 2, 0, 0, 9, 32, 1, 288</column>
+<column name="b_i_U">matrix_multiply_tdEe, 2, 0, 0, 9, 32, 1, 288</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_block_pp0_stage0_11001">and, 0, 0, 2, 1, 1</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="A_address0">33, 6, 4, 24</column>
+<column name="A_address1">27, 5, 4, 20</column>
+<column name="B_address0">33, 6, 4, 24</column>
+<column name="B_address1">27, 5, 4, 20</column>
+<column name="C_address0">33, 6, 4, 24</column>
+<column name="C_address1">27, 5, 4, 20</column>
+<column name="C_d0">33, 6, 32, 192</column>
+<column name="C_d1">27, 5, 32, 160</column>
+<column name="a_i_address0">38, 7, 4, 28</column>
+<column name="a_i_address1">33, 6, 4, 24</column>
+<column name="a_i_ce0">15, 3, 1, 3</column>
+<column name="a_i_ce1">15, 3, 1, 3</column>
+<column name="ap_NS_fsm">225, 52, 1, 52</column>
+<column name="ap_enable_reg_pp0_iter0">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
+<column name="b_i_address0">38, 7, 4, 28</column>
+<column name="b_i_address1">33, 6, 4, 24</column>
+<column name="b_i_ce0">15, 3, 1, 3</column>
+<column name="b_i_ce1">15, 3, 1, 3</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">51, 0, 51, 0</column>
+<column name="ap_enable_reg_pp0_iter0_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="c_i_0_1_reg_639">32, 0, 32, 0</column>
+<column name="c_i_0_2_reg_644">32, 0, 32, 0</column>
+<column name="c_i_1_1_reg_654">32, 0, 32, 0</column>
+<column name="c_i_1_2_reg_659">32, 0, 32, 0</column>
+<column name="c_i_1_reg_649">32, 0, 32, 0</column>
+<column name="c_i_2_1_reg_669">32, 0, 32, 0</column>
+<column name="c_i_2_2_reg_674">32, 0, 32, 0</column>
+<column name="c_i_2_reg_664">32, 0, 32, 0</column>
+<column name="c_i_reg_634">32, 0, 32, 0</column>
+<column name="grp_matrix_multiply_top_1_fu_482_ap_start_reg">1, 0, 1, 0</column>
+<column name="reg_488">32, 0, 32, 0</column>
+<column name="reg_493">32, 0, 32, 0</column>
+<column name="reg_498">32, 0, 32, 0</column>
+<column name="reg_503">32, 0, 32, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, matrix_multiply_top, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, matrix_multiply_top, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, matrix_multiply_top, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, matrix_multiply_top, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, matrix_multiply_top, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, matrix_multiply_top, return value</column>
+<column name="A_address0">out, 4, ap_memory, A, array</column>
+<column name="A_ce0">out, 1, ap_memory, A, array</column>
+<column name="A_q0">in, 32, ap_memory, A, array</column>
+<column name="A_address1">out, 4, ap_memory, A, array</column>
+<column name="A_ce1">out, 1, ap_memory, A, array</column>
+<column name="A_q1">in, 32, ap_memory, A, array</column>
+<column name="B_address0">out, 4, ap_memory, B, array</column>
+<column name="B_ce0">out, 1, ap_memory, B, array</column>
+<column name="B_q0">in, 32, ap_memory, B, array</column>
+<column name="B_address1">out, 4, ap_memory, B, array</column>
+<column name="B_ce1">out, 1, ap_memory, B, array</column>
+<column name="B_q1">in, 32, ap_memory, B, array</column>
+<column name="C_address0">out, 4, ap_memory, C, array</column>
+<column name="C_ce0">out, 1, ap_memory, C, array</column>
+<column name="C_we0">out, 1, ap_memory, C, array</column>
+<column name="C_d0">out, 32, ap_memory, C, array</column>
+<column name="C_address1">out, 4, ap_memory, C, array</column>
+<column name="C_ce1">out, 1, ap_memory, C, array</column>
+<column name="C_we1">out, 1, ap_memory, C, array</column>
+<column name="C_d1">out, 32, ap_memory, C, array</column>
+</table>
+</item>
+</section>
+
+<section name = "Critical Path" level="0">
+<item name = "Max Delay">1.52</item>
+<item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
+<keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
+<column name="'call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57">call, 1.52, 1.52, -, -, -, -, -, -, -, -, -, matrix_multiply_top.1, -</column>
+</table>
+</item>
+</section>
+</profile>

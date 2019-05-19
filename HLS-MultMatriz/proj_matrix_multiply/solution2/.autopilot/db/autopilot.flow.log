@@ -1,0 +1,666 @@
+INFO-FLOW: Workspace D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2 opened at Wed Dec 19 00:32:10 -0200 2018
+Execute     config_clock -quiet -name default -period 1 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 1ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/Xilinx/Vivado/2018.3/common/technology/xilinx/kintex7/kintex7 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.lib 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/kintex7/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 50950} {LUT 203800}    {FF 407600} {DSP48E 840}    {BRAM 890}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/kintex7/kintex7.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.124 sec.
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.189 sec.
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.193 sec.
+Command     ap_source done; 0.194 sec.
+Execute     set_part xc7k70tfbv676-3 
+Execute       add_library xilinx/kintex7/kintex7:xc7k70t:fbv676:-3 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7k70t 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 10550} {LUT 42200}     {FF 84400}  {DSP48E 240}    {BRAM 270}  
+Execute         config_chip_info -quiet -speed fast 
+Execute       add_library xilinx/kintex7/kintex7_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib D:/Xilinx/Vivado/2018.3/common/technology/xilinx/kintex7/kintex7_fpv6 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_hp.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute               source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute               source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/kintex7/kintex7_hp.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-10] Setting target device to 'xc7k70tfbv676-3'
+Execute       get_default_platform 
+Command     set_part done; 0.137 sec.
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 10550} {LUT 42200}     {FF 84400}  {DSP48E 240}    {BRAM 270}  
+Execute     config_chip_info -quiet -speed fast 
+Execute     config_compile -no_signed_zeros=false 
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+Execute     config_compile -unsafe_math_optimizations=false 
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+Execute     config_schedule -effort=medium 
+Execute     config_schedule -enable_dsp_full_reg=false 
+Execute     config_schedule -relax_ii_for_timing=false 
+Execute     config_schedule -verbose=false 
+Execute     config_bind -effort=medium 
+Execute     config_sdx -optimization_level=none 
+Execute       get_config_export -vivado_synth_design_args 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_synth_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute       get_config_bind -effort 
+Execute       get_config_schedule -effort 
+Execute     config_sdx -target=none 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_sdx -optimization_level=none 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=none
+Execute       config_sdx -optimization_level=none 
+Execute         get_config_export -vivado_synth_design_args 
+Execute         get_config_export -vivado_impl_strategy 
+Execute         get_config_export -vivado_synth_strategy 
+Execute         get_config_export -vivado_phys_opt 
+Execute         get_config_bind -effort 
+Execute         get_config_schedule -effort 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_compile -name_max_length 
+Execute       get_config_schedule -relax_ii_for_timing 
+Execute       get_config_schedule -enable_dsp_full_reg 
+Execute       get_config_rtl -register_reset_num 
+Execute       get_config_rtl -auto_prefix 
+Execute       get_config_rtl -enable_maxiConservative 
+Execute       get_config_interface -m_axi_addr64 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' set_clock_uncertainty default 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+Execute       set_clock_uncertainty default 
+Execute         get_clock_period -default -name=default 
+Execute         config_clock -quiet -name default -uncertainty 0.125 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.125ns.
+Command   open_solution done; 0.499 sec.
+Execute   set_part xc7k70tfbv676-3 
+Execute     add_library xilinx/kintex7/kintex7:xc7k70t:fbv676:-3 
+Execute       get_default_platform 
+Execute       license_isbetapart xc7k70t 
+Command       license_isbetapart done; error code: 1; 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 10550} {LUT 42200}     {FF 84400}  {DSP48E 240}    {BRAM 270}  
+Execute       config_chip_info -quiet -speed fast 
+Execute     add_library xilinx/kintex7/kintex7_fpv6 
+Execute       get_default_platform 
+Execute       open_platform DefaultPlatform 
+Execute       import_lib D:/Xilinx/Vivado/2018.3/common/technology/xilinx/kintex7/kintex7_fpv6 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_hp.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute               source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/kintex7/kintex7_hp.hlp 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     get_default_platform 
+Command   set_part done; 0.124 sec.
+Execute   create_clock -period 1 -name default 
+Execute   config_compile 
+Execute   config_schedule -effort medium -relax_ii_for_timing=0 
+Execute   config_bind -effort medium 
+Execute   config_sdx -optimization_level none -target none 
+Execute     get_config_export -vivado_synth_design_args 
+Execute     get_config_export -vivado_impl_strategy 
+Execute     get_config_export -vivado_synth_strategy 
+Execute     get_config_export -vivado_phys_opt 
+Execute     get_config_bind -effort 
+Execute     get_config_schedule -effort 
+Execute     get_config_compile -pipeline_loops 
+Execute     get_config_compile -name_max_length 
+Execute     get_config_schedule -relax_ii_for_timing 
+Execute     get_config_schedule -enable_dsp_full_reg 
+Execute     get_config_rtl -register_reset_num 
+Execute     get_config_rtl -auto_prefix 
+Execute     get_config_rtl -enable_maxiConservative 
+Execute     get_config_interface -m_axi_addr64 
+Execute     send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' set_clock_uncertainty default 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+Execute     set_clock_uncertainty default 
+Execute   source ./proj_matrix_multiply/solution2/directives.tcl 
+Execute     set_directive_pipeline matrix_multiply_top 
+INFO-FLOW: Setting directive 'PIPELINE' 
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     config_compile -blackbox  
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'matrix_multiply.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling matrix_multiply.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted matrix_multiply.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2018.3/msys" -hls  -fno-exceptions  -D__llvm__  -E "matrix_multiply.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply.pp.0.cpp" 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2018.3/msys -hls -fno-exceptions -D__llvm__ -E matrix_multiply.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply.pp.0.cpp
+Command       clang done; 2.357 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.352 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2018.3/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply.pp.0.cpp"  -o "D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/useless.bc"  
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2018.3/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply.pp.0.cpp -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/useless.bc
+Command       clang done; 5.136 sec.
+INFO-FLOW: Done: GCC PP time: 8.8 seconds per iteration
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply.pp.0.cpp std=gnu++98 -directive=D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/.systemc_flag -quiet -fix-errors D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.27 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply.pp.0.cpp std=gnu++98 -directive=D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/all.directive.json 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/all.directive.json -quiet -fix-errors D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 2.251 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/xilinx-dataflow-lawyer.matrix_multiply.pp.0.cpp.diag.yml D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/xilinx-dataflow-lawyer.matrix_multiply.pp.0.cpp.out.log 2> D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/xilinx-dataflow-lawyer.matrix_multiply.pp.0.cpp.err.log 
+Command       ap_eval done; 1.155 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/tidy-3.1.matrix_multiply.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/tidy-3.1.matrix_multiply.pp.0.cpp.out.log 2> D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/tidy-3.1.matrix_multiply.pp.0.cpp.err.log 
+Command         ap_eval done; 2.524 sec.
+Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/xilinx-legacy-rewriter.matrix_multiply.pp.0.cpp.out.log 2> D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/xilinx-legacy-rewriter.matrix_multiply.pp.0.cpp.err.log 
+Command         ap_eval done; 1.609 sec.
+Command       tidy_31 done; 4.177 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 7.6 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 2.785 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply.bc" 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply.bc
+Command       clang done; 5.287 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply.g.bc -hls-opt -except-internalize matrix_multiply_top -LD:/Xilinx/Vivado/2018.3/win64/lib -lhlsm -lhlsmc++ -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/a.g 
+Command       llvm-ld done; 1.653 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:30 . Memory (MB): peak = 105.664 ; gain = 22.000
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:30 . Memory (MB): peak = 105.664 ; gain = 22.000
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/a.pp.bc -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/a.pp.0.bc -disable-opt -LD:/Xilinx/Vivado/2018.3/win64/lib -lfloatconversion -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.803 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -lower-blackbox -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top matrix_multiply_top -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/a.g.0.bc -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:31 . Memory (MB): peak = 106.742 ; gain = 23.078
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/a.g.1.bc -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'hls::NoTranspose::GetElement<3, 3, float>' into 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' into 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::matrix_multiply<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, float, float>' into 'matrix_multiply_top' (matrix_multiply.cpp:57) automatically.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/a.g.2.prechk.bc -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:31 . Memory (MB): peak = 107.000 ; gain = 23.336
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/a.g.1.bc to D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/a.o.1.bc -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'matrix_multiply_top' (matrix_multiply.cpp:36).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:296).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'b_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'b_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'a_row_loop' (matrix_multiply.cpp:45) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'a_col_loop' (matrix_multiply.cpp:46) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'b_row_loop' (matrix_multiply.cpp:50) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'b_col_loop' (matrix_multiply.cpp:51) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'c_row_loop' (matrix_multiply.cpp:60) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'c_col_loop' (matrix_multiply.cpp:61) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'a_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:318) in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'a_row_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:319) in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'b_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320) in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' completely with a factor of 3.
+WARNING: [XFORM 203-105] Cannot partition array 'b_i' (matrix_multiply.cpp:41): incorrect partition factor 1.
+WARNING: [XFORM 203-105] Cannot partition array 'c_i' : incorrect partition factor 1.
+WARNING: [XFORM 203-105] Cannot partition array 'sum_mult' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312): incorrect partition factor 1.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult.0' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult.1' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult.2' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i.2' automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::NoTranspose::GetElement<3, 3, float>' into 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' into 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::matrix_multiply<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, float, float>' into 'matrix_multiply_top' (matrix_multiply.cpp:57) automatically.
+Command         transform done; 0.382 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/a.o.1.tmp.bc -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-602] Inlining function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' into 'hls::matrix_multiply_top<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:32 . Memory (MB): peak = 128.590 ; gain = 44.926
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -cdfg-build D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/a.o.2.bc -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+WARNING: [XFORM 203-631] Renaming function 'hls::matrix_multiply_top<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' to 'matrix_multiply_top.1' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:60:3)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:32 . Memory (MB): peak = 129.098 ; gain = 45.434
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 1.572 sec.
+Command     elaborate done; 29.797 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'matrix_multiply_top' ...
+Execute       ap_set_top_model matrix_multiply_top 
+WARNING: [SYN 201-103] Legalizing function name 'matrix_multiply_top.1' to 'matrix_multiply_top_1'.
+Execute       get_model_list matrix_multiply_top -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model matrix_multiply_top 
+Execute       preproc_iomode -model matrix_multiply_top.1 
+Execute       get_model_list matrix_multiply_top -filter all-wo-channel 
+INFO-FLOW: Model list for configure: matrix_multiply_top.1 matrix_multiply_top
+INFO-FLOW: Configuring Module : matrix_multiply_top.1 ...
+Execute       set_default_model matrix_multiply_top.1 
+Execute       apply_spec_resource_limit matrix_multiply_top.1 
+INFO-FLOW: Configuring Module : matrix_multiply_top ...
+Execute       set_default_model matrix_multiply_top 
+Execute       apply_spec_resource_limit matrix_multiply_top 
+INFO-FLOW: Model list for preprocess: matrix_multiply_top.1 matrix_multiply_top
+INFO-FLOW: Preprocessing Module: matrix_multiply_top.1 ...
+Execute       set_default_model matrix_multiply_top.1 
+Execute       cdfg_preprocess -model matrix_multiply_top.1 
+Execute       rtl_gen_preprocess matrix_multiply_top.1 
+INFO-FLOW: Preprocessing Module: matrix_multiply_top ...
+Execute       set_default_model matrix_multiply_top 
+Execute       cdfg_preprocess -model matrix_multiply_top 
+Execute       rtl_gen_preprocess matrix_multiply_top 
+INFO-FLOW: Model list for synthesis: matrix_multiply_top.1 matrix_multiply_top
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_multiply_top_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model matrix_multiply_top.1 
+Execute       schedule -model matrix_multiply_top.1 
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated delay (1.53ns) of 'fmul' operation ('sum_mult[0][0]', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:326->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) exceeds the target cycle time (target cycle time: 1ns, clock uncertainty: 0.125ns, effective cycle time: 0.875ns).
+INFO: [SCHED 204-61] Pipelining function 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('B_load_5', D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:325->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) on array 'B' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'B'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('A_load', D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) on array 'A' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'A'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 46.
+WARNING: [SCHED 204-21] Estimated clock period (1.534ns) exceeds the target (target clock period: 1ns, clock uncertainty: 0.125ns, effective delay budget: 0.875ns).
+WARNING: [SCHED 204-21] The critical path in module 'matrix_multiply_top_1' consists of the following:
+	'fmul' operation ('mult_1_i', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:326->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) [39]  (1.53 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.917 sec.
+INFO: [HLS 200-111]  Elapsed time: 32.806 seconds; current allocated memory: 87.685 MB.
+Execute       report -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top_1.verbose.sched.rpt -verbose -f 
+Command       report done; 0.611 sec.
+Execute       db_write -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top_1.sched.adb -f 
+INFO-FLOW: Finish scheduling matrix_multiply_top.1.
+Execute       set_default_model matrix_multiply_top.1 
+Execute       bind -model matrix_multiply_top.1 
+BIND OPTION: effort=medium
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=matrix_multiply_top.1
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.777 seconds; current allocated memory: 88.703 MB.
+Execute       report -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top_1.verbose.bind.rpt -verbose -f 
+Command       report done; 0.548 sec.
+Execute       db_write -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top_1.bind.adb -f 
+Command       db_write done; 0.107 sec.
+INFO-FLOW: Finish binding matrix_multiply_top.1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_multiply_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model matrix_multiply_top 
+Execute       schedule -model matrix_multiply_top 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'matrix_multiply_top'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 6 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 7 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 8 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 9 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 10, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 11 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 12 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 13 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 14 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 16 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 17 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 18 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 19 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 20, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 21 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 22 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 23 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 24 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 38 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 39 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 40, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 41 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 42 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 43 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 44 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('A_load_8', matrix_multiply.cpp:47) on array 'A' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'A'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 51, Depth = 58.
+WARNING: [SCHED 204-21] Estimated clock period (1.523ns) exceeds the target (target clock period: 1ns, clock uncertainty: 0.125ns, effective delay budget: 0.875ns).
+WARNING: [SCHED 204-21] The critical path in module 'matrix_multiply_top' consists of the following:
+	'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' [92]  (1.52 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.518 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.198 seconds; current allocated memory: 89.128 MB.
+Execute       report -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.verbose.sched.rpt -verbose -f 
+Command       report done; 0.11 sec.
+Execute       db_write -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.sched.adb -f 
+INFO-FLOW: Finish scheduling matrix_multiply_top.
+Execute       set_default_model matrix_multiply_top 
+Execute       bind -model matrix_multiply_top 
+BIND OPTION: effort=medium
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=matrix_multiply_top
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.21 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.387 seconds; current allocated memory: 89.529 MB.
+Execute       report -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.verbose.bind.rpt -verbose -f 
+Command       report done; 0.347 sec.
+Execute       db_write -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.bind.adb -f 
+INFO-FLOW: Finish binding matrix_multiply_top.
+Execute       get_model_list matrix_multiply_top -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess matrix_multiply_top.1 
+Execute       rtl_gen_preprocess matrix_multiply_top 
+INFO-FLOW: Model list for RTL generation: matrix_multiply_top.1 matrix_multiply_top
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_multiply_top_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model matrix_multiply_top.1 -vendor xilinx -mg_file D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top_1.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_fadd_32ns_32ns_32_14_no_dsp_1' to 'matrix_multiply_tbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_fmul_32ns_32ns_32_10_full_dsp_1' to 'matrix_multiply_tcud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'matrix_multiply_tbkb': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matrix_multiply_tcud': 6 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_multiply_top_1'.
+Command       create_rtl_model done; 0.119 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.594 seconds; current allocated memory: 90.749 MB.
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl matrix_multiply_top.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/syn/systemc/matrix_multiply_top_1 -synmodules matrix_multiply_top.1 matrix_multiply_top 
+Execute       gen_rtl matrix_multiply_top.1 -style xilinx -f -lang vhdl -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/syn/vhdl/matrix_multiply_top_1 
+Execute       gen_rtl matrix_multiply_top.1 -style xilinx -f -lang vlog -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/syn/verilog/matrix_multiply_top_1 
+Execute       gen_tb_info matrix_multiply_top.1 -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top_1 -p D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db 
+Execute       report -model matrix_multiply_top.1 -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/syn/report/matrix_multiply_top_1_csynth.rpt -f 
+Execute       report -model matrix_multiply_top.1 -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/syn/report/matrix_multiply_top_1_csynth.xml -f -x 
+Execute       report -model matrix_multiply_top.1 -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top_1.verbose.rpt -verbose -f 
+Command       report done; 0.647 sec.
+Execute       db_write -model matrix_multiply_top.1 -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top_1.adb -f 
+Command       db_write done; 0.158 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_multiply_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model matrix_multiply_top -vendor xilinx -mg_file D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_top/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_top/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_top/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrix_multiply_top' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_a_i' to 'matrix_multiply_tdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_b_i' to 'matrix_multiply_teOg' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_multiply_top'.
+Command       create_rtl_model done; 0.108 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.44 seconds; current allocated memory: 92.087 MB.
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl matrix_multiply_top -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/syn/systemc/matrix_multiply_top -synmodules matrix_multiply_top.1 matrix_multiply_top 
+Execute       gen_rtl matrix_multiply_top -istop -style xilinx -f -lang vhdl -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/syn/vhdl/matrix_multiply_top 
+Execute       gen_rtl matrix_multiply_top -istop -style xilinx -f -lang vlog -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/syn/verilog/matrix_multiply_top 
+Execute       export_constraint_db -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.constraint.tcl -f -tool general 
+Execute       report -model matrix_multiply_top -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.design.xml -verbose -f -dv 
+Command       report done; 0.119 sec.
+Execute       report -model matrix_multiply_top -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.sdaccel.xml -verbose -f -sdaccel 
+Execute       gen_tb_info matrix_multiply_top -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top -p D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db 
+Execute       report -model matrix_multiply_top -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/syn/report/matrix_multiply_top_csynth.rpt -f 
+Execute       report -model matrix_multiply_top -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/syn/report/matrix_multiply_top_csynth.xml -f -x 
+Execute       report -model matrix_multiply_top -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.verbose.rpt -verbose -f 
+Command       report done; 0.251 sec.
+Execute       db_write -model matrix_multiply_top -o D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.adb -f 
+Execute       sc_get_clocks matrix_multiply_top 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain matrix_multiply_top 
+INFO-FLOW: Model list for RTL component generation: matrix_multiply_top.1 matrix_multiply_top
+INFO-FLOW: Handling components in module [matrix_multiply_top_1] ... 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top_1.compgen.tcl 
+INFO-FLOW: Found component matrix_multiply_tbkb.
+INFO-FLOW: Append model matrix_multiply_tbkb
+INFO-FLOW: Found component matrix_multiply_tcud.
+INFO-FLOW: Append model matrix_multiply_tcud
+INFO-FLOW: Handling components in module [matrix_multiply_top] ... 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.compgen.tcl 
+INFO-FLOW: Found component matrix_multiply_tdEe.
+INFO-FLOW: Append model matrix_multiply_tdEe
+INFO-FLOW: Append model matrix_multiply_top_1
+INFO-FLOW: Append model matrix_multiply_top
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: matrix_multiply_tbkb matrix_multiply_tcud matrix_multiply_tdEe matrix_multiply_top_1 matrix_multiply_top
+INFO-FLOW: To file: write model matrix_multiply_tbkb
+INFO-FLOW: To file: write model matrix_multiply_tcud
+INFO-FLOW: To file: write model matrix_multiply_tdEe
+INFO-FLOW: To file: write model matrix_multiply_top_1
+INFO-FLOW: To file: write model matrix_multiply_top
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/global.setting.tcl
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/kintex7/kintex7.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.12 sec.
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.182 sec.
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.189 sec.
+Command       ap_source done; 0.189 sec.
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=1.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/global.setting.tcl 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/global.setting.tcl 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/global.setting.tcl 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top_1.compgen.tcl 
+Command       ap_source done; 0.155 sec.
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'matrix_multiply_tdEe_ram (RAM)' using block RAMs.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/global.setting.tcl
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/kintex7/kintex7.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.114 sec.
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.177 sec.
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.181 sec.
+Command       ap_source done; 0.181 sec.
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=matrix_multiply_top xml_exists=0
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.rtl_wrap.cfg.tcl 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.rtl_wrap.cfg.tcl 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.rtl_wrap.cfg.tcl 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.tbgen.tcl 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/global.setting.tcl 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top_1.compgen.tcl 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/global.setting.tcl 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top_1.compgen.tcl 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.compgen.tcl 
+Execute         source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.tbgen.tcl 
+Execute         source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.tbgen.tcl 
+Execute         source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/global.setting.tcl 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top_1.compgen.tcl 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.compgen.tcl 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/global.setting.tcl 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.constraint.tcl 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=8
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=3
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=5 #gSsdmPorts=8
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/global.setting.tcl 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/global.setting.tcl 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.tbgen.tcl 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.tbgen.tcl 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_export -xo 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/global.setting.tcl 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/matrix_multiply_top.constraint.tcl 
+Execute       sc_get_clocks matrix_multiply_top 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/global.setting.tcl 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/impl/misc/matrix_multiply_top_ap_fadd_12_no_dsp_32_ip.tcl 
+Execute       source D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/impl/misc/matrix_multiply_top_ap_fmul_8_full_dsp_32_ip.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       ::config_rtl 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist: D:/Gabriel/Documents/Xilinx/matrix_multiply/proj_matrix_multiply/solution2/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:00:40 . Memory (MB): peak = 147.844 ; gain = 64.180
+INFO: [SYSC 207-301] Generating SystemC RTL for matrix_multiply_top.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrix_multiply_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrix_multiply_top.
+Command     autosyn done; 8.419 sec.
+Execute     get_part 
+Execute     get_config_export -sdx_tcl 
+Command   csynth_design done; 38.257 sec.
+Command ap_source done; 38.975 sec.
+Execute cleanup_all 

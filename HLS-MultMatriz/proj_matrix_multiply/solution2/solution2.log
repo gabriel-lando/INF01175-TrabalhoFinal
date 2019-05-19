@@ -1,0 +1,1107 @@
+==============================================================
+File generated on Tue Dec 18 20:35:50 -0200 2018
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 1ns.
+INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'matrix_multiply.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:25 . Memory (MB): peak = 104.230 ; gain = 20.430
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:25 . Memory (MB): peak = 104.230 ; gain = 20.430
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:26 . Memory (MB): peak = 105.781 ; gain = 21.980
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'hls::NoTranspose::GetElement<3, 3, float>' into 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' into 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::matrix_multiply_top<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' into 'hls::matrix_multiply<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::matrix_multiply<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, float, float>' into 'matrix_multiply_top' (matrix_multiply.cpp:57) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:26 . Memory (MB): peak = 106.035 ; gain = 22.234
+WARNING: [XFORM 203-105] Cannot partition array 'b_i' (matrix_multiply.cpp:41): incorrect partition factor 1.
+WARNING: [XFORM 203-105] Cannot partition array 'c_i' : incorrect partition factor 1.
+WARNING: [XFORM 203-105] Cannot partition array 'sum_mult' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312): incorrect partition factor 1.
+INFO: [XFORM 203-602] Inlining function 'hls::NoTranspose::GetElement<3, 3, float>' into 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' into 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::matrix_multiply_top<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' into 'hls::matrix_multiply<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::matrix_multiply<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, float, float>' into 'matrix_multiply_top' (matrix_multiply.cpp:57) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:26 . Memory (MB): peak = 128.480 ; gain = 44.680
+INFO: [XFORM 203-541] Flattening a loop nest 'a_row_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:319:76) in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'a_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:318:71) in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>'.
+WARNING: [XFORM 203-631] Renaming function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' to 'matrix_multiply_alt2' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:60:13)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:27 . Memory (MB): peak = 128.781 ; gain = 44.980
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrix_multiply_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_multiply_alt2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated delay (2.13ns) of 'fadd' operation ('tmp_13', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335) exceeds the target cycle time (target cycle time: 1ns, clock uncertainty: 0.125ns, effective cycle time: 0.875ns).
+INFO: [SCHED 204-61] Pipelining loop 'a_col_loop_a_row_loop_b_col_loop'.
+WARNING: [SCHED 204-70] Cannot meet target clock period in 'fadd' operation ('tmp_13', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335) (combination delay: 2.515 ns) to honor II constraint (II=1) in region 'a_col_loop_a_row_loop_b_col_loop'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_alt2': Unable to enforce a carried dependence constraint (II = 1, distance = 9, offset = 1)
+   between 'store' operation (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:338) of variable 'tmp_13', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335 on array 'sum_mult', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312 and 'load' operation ('sum_mult_load', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335) on array 'sum_mult', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 31.
+WARNING: [SCHED 204-70] Cannot meet target clock period from 'select' operation ('Col_assign_mid2') to 'add' operation ('c') (combination delay: 1.625 ns) to honor II or Latency constraint in region 'a_col_loop_a_row_loop_b_col_loop'.
+WARNING: [SCHED 204-21] Estimated clock period (2.515ns) exceeds the target (target clock period: 1ns, clock uncertainty: 0.125ns, effective delay budget: 0.875ns).
+WARNING: [SCHED 204-21] The critical path in module 'matrix_multiply_alt2' consists of the following:
+	'fadd' operation ('tmp_13', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335) [64]  (2.52 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 26.969 seconds; current allocated memory: 87.667 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.195 seconds; current allocated memory: 88.071 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_multiply_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated delay (1.34ns) of 'add' operation ('tmp_11', matrix_multiply.cpp:47) exceeds the target cycle time (target cycle time: 1ns, clock uncertainty: 0.125ns, effective cycle time: 0.875ns).
+WARNING: [SCHED 204-21] Estimated clock period (1.338ns) exceeds the target (target clock period: 1ns, clock uncertainty: 0.125ns, effective delay budget: 0.875ns).
+WARNING: [SCHED 204-21] The critical path in module 'matrix_multiply_top' consists of the following:
+	'phi' operation ('c') with incoming values : ('c', matrix_multiply.cpp:46) [27]  (0 ns)
+	'add' operation ('tmp_11', matrix_multiply.cpp:47) [35]  (1.34 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.395 seconds; current allocated memory: 88.378 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 6 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.181 seconds; current allocated memory: 88.749 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_multiply_alt2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_alt2_sum_mult' to 'matrix_multiply_abkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_fadd_32ns_32ns_32_13_full_dsp_1' to 'matrix_multiply_tcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_fmul_32ns_32ns_32_10_full_dsp_1' to 'matrix_multiply_tdEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'matrix_multiply_tcud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matrix_multiply_tdEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_multiply_alt2'.
+INFO: [HLS 200-111]  Elapsed time: 0.402 seconds; current allocated memory: 89.592 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_multiply_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_top/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_top/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_top/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrix_multiply_top' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_a_i' to 'matrix_multiply_teOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_b_i' to 'matrix_multiply_tfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_C_assign' to 'matrix_multiply_tg8j' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_multiply_top'.
+INFO: [HLS 200-111]  Elapsed time: 0.607 seconds; current allocated memory: 90.320 MB.
+INFO: [RTMG 210-278] Implementing memory 'matrix_multiply_abkb_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'matrix_multiply_teOg_ram (RAM)' using distributed RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:31 . Memory (MB): peak = 143.039 ; gain = 59.238
+INFO: [SYSC 207-301] Generating SystemC RTL for matrix_multiply_top.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrix_multiply_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrix_multiply_top.
+INFO: [HLS 200-112] Total elapsed time: 31.329 seconds; peak allocated memory: 90.320 MB.
+==============================================================
+File generated on Tue Dec 18 20:39:56 -0200 2018
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 1ns.
+INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'matrix_multiply.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:27 . Memory (MB): peak = 104.551 ; gain = 19.637
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:27 . Memory (MB): peak = 104.551 ; gain = 19.637
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:28 . Memory (MB): peak = 105.973 ; gain = 21.059
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'hls::NoTranspose::GetElement<3, 3, float>' into 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' into 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::matrix_multiply<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, float, float>' into 'matrix_multiply_top' (matrix_multiply.cpp:57) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:28 . Memory (MB): peak = 106.227 ; gain = 21.313
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'matrix_multiply_top' (matrix_multiply.cpp:36).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:296).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'b_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'b_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'a_row_loop' (matrix_multiply.cpp:45) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'a_col_loop' (matrix_multiply.cpp:46) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'b_row_loop' (matrix_multiply.cpp:50) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'b_col_loop' (matrix_multiply.cpp:51) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'c_row_loop' (matrix_multiply.cpp:60) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'c_col_loop' (matrix_multiply.cpp:61) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'a_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:318) in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'a_row_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:319) in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'b_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320) in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' completely with a factor of 3.
+WARNING: [XFORM 203-105] Cannot partition array 'b_i' (matrix_multiply.cpp:41): incorrect partition factor 1.
+WARNING: [XFORM 203-105] Cannot partition array 'c_i' : incorrect partition factor 1.
+WARNING: [XFORM 203-105] Cannot partition array 'sum_mult' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312): incorrect partition factor 1.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult.0' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult.1' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult.2' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i.2' automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::NoTranspose::GetElement<3, 3, float>' into 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' into 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::matrix_multiply<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, float, float>' into 'matrix_multiply_top' (matrix_multiply.cpp:57) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' into 'hls::matrix_multiply_top<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:29 . Memory (MB): peak = 127.609 ; gain = 42.695
+WARNING: [XFORM 203-631] Renaming function 'hls::matrix_multiply_top<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' to 'matrix_multiply_top.1' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:60:3)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:29 . Memory (MB): peak = 128.367 ; gain = 43.453
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrix_multiply_top' ...
+WARNING: [SYN 201-103] Legalizing function name 'matrix_multiply_top.1' to 'matrix_multiply_top_1'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_multiply_top_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated delay (2.13ns) of 'fadd' operation ('sum_mult[0][0]', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) exceeds the target cycle time (target cycle time: 1ns, clock uncertainty: 0.125ns, effective cycle time: 0.875ns).
+INFO: [SCHED 204-61] Pipelining function 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('B_load_2', D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:325->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) on array 'B' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'B'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('A_load_6', D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) on array 'A' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'A'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 46.
+WARNING: [SCHED 204-21] Estimated clock period (2.131ns) exceeds the target (target clock period: 1ns, clock uncertainty: 0.125ns, effective delay budget: 0.875ns).
+WARNING: [SCHED 204-21] The critical path in module 'matrix_multiply_top_1' consists of the following:
+	'fadd' operation ('sum_mult[0][0]', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) [40]  (2.13 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 29.414 seconds; current allocated memory: 87.653 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.684 seconds; current allocated memory: 88.651 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_multiply_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated delay (1.25ns) of 'load' operation ('A_load', matrix_multiply.cpp:47) on array 'A' exceeds the target cycle time (target cycle time: 1ns, clock uncertainty: 0.125ns, effective cycle time: 0.875ns).
+INFO: [SCHED 204-61] Pipelining function 'matrix_multiply_top'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 6 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 7 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 8 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 9 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 10, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 11 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 12 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 13 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 14 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 16 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 17 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 18 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 19 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 20, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 21 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 22 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 23 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 24 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 38 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 39 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 40, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 41 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 42 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 43 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 44 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('A_load_8', matrix_multiply.cpp:47) on array 'A' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'A'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 51, Depth = 58.
+WARNING: [SCHED 204-21] Estimated clock period (2.131ns) exceeds the target (target clock period: 1ns, clock uncertainty: 0.125ns, effective delay budget: 0.875ns).
+WARNING: [SCHED 204-21] The critical path in module 'matrix_multiply_top' consists of the following:
+	'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' [92]  (2.13 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.1 seconds; current allocated memory: 89.060 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.356 seconds; current allocated memory: 89.461 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_multiply_top_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_fadd_32ns_32ns_32_14_no_dsp_1' to 'matrix_multiply_tbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_fmul_32ns_32ns_32_10_full_dsp_1' to 'matrix_multiply_tcud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'matrix_multiply_tbkb': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matrix_multiply_tcud': 6 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_multiply_top_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.382 seconds; current allocated memory: 90.698 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_multiply_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_top/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_top/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_top/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrix_multiply_top' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_a_i' to 'matrix_multiply_tdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_b_i' to 'matrix_multiply_teOg' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_multiply_top'.
+INFO: [HLS 200-111]  Elapsed time: 1.158 seconds; current allocated memory: 92.073 MB.
+INFO: [RTMG 210-278] Implementing memory 'matrix_multiply_tdEe_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:36 . Memory (MB): peak = 146.945 ; gain = 62.031
+INFO: [SYSC 207-301] Generating SystemC RTL for matrix_multiply_top.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrix_multiply_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrix_multiply_top.
+INFO: [HLS 200-112] Total elapsed time: 35.811 seconds; peak allocated memory: 92.073 MB.
+==============================================================
+File generated on Wed Dec 19 00:10:59 -0200 2018
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 1ns.
+INFO: [HLS 200-10] Setting target device to 'xc7s6ftgb196-2'
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_bind -effort=medium
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_schedule -effort=medium
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=none
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_schedule -relax_ii_for_timing=0
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.125ns.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [HLS 200-10] Analyzing design file 'matrix_multiply.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:40 . Memory (MB): peak = 106.020 ; gain = 21.895
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:40 . Memory (MB): peak = 106.020 ; gain = 21.895
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:41 . Memory (MB): peak = 106.723 ; gain = 22.598
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'hls::NoTranspose::GetElement<3, 3, float>' into 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' into 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::matrix_multiply<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, float, float>' into 'matrix_multiply_top' (matrix_multiply.cpp:57) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:41 . Memory (MB): peak = 106.980 ; gain = 22.855
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'matrix_multiply_top' (matrix_multiply.cpp:36).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:296).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'b_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'b_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'a_row_loop' (matrix_multiply.cpp:45) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'a_col_loop' (matrix_multiply.cpp:46) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'b_row_loop' (matrix_multiply.cpp:50) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'b_col_loop' (matrix_multiply.cpp:51) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'c_row_loop' (matrix_multiply.cpp:60) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'c_col_loop' (matrix_multiply.cpp:61) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'a_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:318) in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'a_row_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:319) in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'b_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320) in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' completely with a factor of 3.
+WARNING: [XFORM 203-105] Cannot partition array 'b_i' (matrix_multiply.cpp:41): incorrect partition factor 1.
+WARNING: [XFORM 203-105] Cannot partition array 'c_i' : incorrect partition factor 1.
+WARNING: [XFORM 203-105] Cannot partition array 'sum_mult' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312): incorrect partition factor 1.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult.0' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult.1' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult.2' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i.2' automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::NoTranspose::GetElement<3, 3, float>' into 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' into 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::matrix_multiply<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, float, float>' into 'matrix_multiply_top' (matrix_multiply.cpp:57) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' into 'hls::matrix_multiply_top<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:42 . Memory (MB): peak = 128.723 ; gain = 44.598
+WARNING: [XFORM 203-631] Renaming function 'hls::matrix_multiply_top<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' to 'matrix_multiply_top.1' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:60:3)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:42 . Memory (MB): peak = 129.230 ; gain = 45.105
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrix_multiply_top' ...
+WARNING: [SYN 201-103] Legalizing function name 'matrix_multiply_top.1' to 'matrix_multiply_top_1'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_multiply_top_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated delay (2.45ns) of 'fadd' operation ('tmp', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) exceeds the target cycle time (target cycle time: 1ns, clock uncertainty: 0.125ns, effective cycle time: 0.875ns).
+INFO: [SCHED 204-61] Pipelining function 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('B_load_5', D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:325->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) on array 'B' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'B'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('A_load', D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) on array 'A' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'A'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 44.
+WARNING: [SCHED 204-21] Estimated clock period (2.451ns) exceeds the target (target clock period: 1ns, clock uncertainty: 0.125ns, effective delay budget: 0.875ns).
+WARNING: [SCHED 204-21] The critical path in module 'matrix_multiply_top_1' consists of the following:
+	'fadd' operation ('tmp', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) [55]  (2.45 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 42.732 seconds; current allocated memory: 87.612 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.569 seconds; current allocated memory: 88.563 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_multiply_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated delay (1.54ns) of 'load' operation ('A_load', matrix_multiply.cpp:47) on array 'A' exceeds the target cycle time (target cycle time: 1ns, clock uncertainty: 0.125ns, effective cycle time: 0.875ns).
+INFO: [SCHED 204-61] Pipelining function 'matrix_multiply_top'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 6 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 7 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 8 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 9 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 10, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 11 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 12 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 13 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 14 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 16 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 17 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 18 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 19 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 20, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 21 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 22 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 23 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 24 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 38 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 39 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 40, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 41 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 42 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 43 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('A_load_7', matrix_multiply.cpp:47) on array 'A' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'A'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 49, Depth = 56.
+WARNING: [SCHED 204-21] Estimated clock period (2.451ns) exceeds the target (target clock period: 1ns, clock uncertainty: 0.125ns, effective delay budget: 0.875ns).
+WARNING: [SCHED 204-21] The critical path in module 'matrix_multiply_top' consists of the following:
+	'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' [92]  (2.45 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.268 seconds; current allocated memory: 88.983 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.366 seconds; current allocated memory: 89.380 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_multiply_top_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_fadd_32ns_32ns_32_14_no_dsp_1' to 'matrix_multiply_tbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_fmul_32ns_32ns_32_8_max_dsp_1' to 'matrix_multiply_tcud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'matrix_multiply_tbkb': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matrix_multiply_tcud': 6 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_multiply_top_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.402 seconds; current allocated memory: 90.610 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_multiply_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_top/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_top/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_top/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrix_multiply_top' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_a_i' to 'matrix_multiply_tdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_b_i' to 'matrix_multiply_teOg' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_multiply_top'.
+INFO: [HLS 200-111]  Elapsed time: 1.284 seconds; current allocated memory: 91.931 MB.
+INFO: [RTMG 210-278] Implementing memory 'matrix_multiply_tdEe_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:49 . Memory (MB): peak = 148.113 ; gain = 63.988
+INFO: [SYSC 207-301] Generating SystemC RTL for matrix_multiply_top.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrix_multiply_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrix_multiply_top.
+INFO: [HLS 200-112] Total elapsed time: 49.529 seconds; peak allocated memory: 91.931 MB.
+==============================================================
+File generated on Wed Dec 19 00:14:03 -0200 2018
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 1ns.
+INFO: [HLS 200-10] Setting target device to 'xc7s6ftgb196-2'
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_bind -effort=medium
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=none
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.125ns.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [HLS 200-10] Analyzing design file 'matrix_multiply.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:29 . Memory (MB): peak = 105.844 ; gain = 21.953
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:29 . Memory (MB): peak = 105.844 ; gain = 21.953
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:30 . Memory (MB): peak = 106.852 ; gain = 22.961
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'hls::NoTranspose::GetElement<3, 3, float>' into 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' into 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::matrix_multiply<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, float, float>' into 'matrix_multiply_top' (matrix_multiply.cpp:57) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:30 . Memory (MB): peak = 107.105 ; gain = 23.215
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'matrix_multiply_top' (matrix_multiply.cpp:36).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:296).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'b_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'b_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'a_row_loop' (matrix_multiply.cpp:45) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'a_col_loop' (matrix_multiply.cpp:46) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'b_row_loop' (matrix_multiply.cpp:50) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'b_col_loop' (matrix_multiply.cpp:51) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'c_row_loop' (matrix_multiply.cpp:60) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'c_col_loop' (matrix_multiply.cpp:61) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'a_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:318) in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'a_row_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:319) in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'b_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320) in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' completely with a factor of 3.
+WARNING: [XFORM 203-105] Cannot partition array 'b_i' (matrix_multiply.cpp:41): incorrect partition factor 1.
+WARNING: [XFORM 203-105] Cannot partition array 'c_i' : incorrect partition factor 1.
+WARNING: [XFORM 203-105] Cannot partition array 'sum_mult' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312): incorrect partition factor 1.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult.0' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult.1' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult.2' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i.2' automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::NoTranspose::GetElement<3, 3, float>' into 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' into 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::matrix_multiply<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, float, float>' into 'matrix_multiply_top' (matrix_multiply.cpp:57) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' into 'hls::matrix_multiply_top<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:30 . Memory (MB): peak = 128.391 ; gain = 44.500
+WARNING: [XFORM 203-631] Renaming function 'hls::matrix_multiply_top<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' to 'matrix_multiply_top.1' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:60:3)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:30 . Memory (MB): peak = 129.148 ; gain = 45.258
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrix_multiply_top' ...
+WARNING: [SYN 201-103] Legalizing function name 'matrix_multiply_top.1' to 'matrix_multiply_top_1'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_multiply_top_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated delay (2.45ns) of 'fadd' operation ('tmp', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) exceeds the target cycle time (target cycle time: 1ns, clock uncertainty: 0.125ns, effective cycle time: 0.875ns).
+INFO: [SCHED 204-61] Pipelining function 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('B_load_5', D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:325->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) on array 'B' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'B'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('A_load', D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) on array 'A' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'A'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 44.
+WARNING: [SCHED 204-21] Estimated clock period (2.451ns) exceeds the target (target clock period: 1ns, clock uncertainty: 0.125ns, effective delay budget: 0.875ns).
+WARNING: [SCHED 204-21] The critical path in module 'matrix_multiply_top_1' consists of the following:
+	'fadd' operation ('tmp', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) [55]  (2.45 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 31.479 seconds; current allocated memory: 87.612 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.567 seconds; current allocated memory: 88.578 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_multiply_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated delay (1.54ns) of 'load' operation ('A_load', matrix_multiply.cpp:47) on array 'A' exceeds the target cycle time (target cycle time: 1ns, clock uncertainty: 0.125ns, effective cycle time: 0.875ns).
+INFO: [SCHED 204-61] Pipelining function 'matrix_multiply_top'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 6 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 7 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 8 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 9 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 10, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 11 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 12 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 13 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 14 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 16 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 17 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 18 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 19 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 20, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 21 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 22 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 23 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 24 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 38 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 39 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 40, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 41 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 42 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 43 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('A_load_7', matrix_multiply.cpp:47) on array 'A' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'A'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 49, Depth = 56.
+WARNING: [SCHED 204-21] Estimated clock period (2.451ns) exceeds the target (target clock period: 1ns, clock uncertainty: 0.125ns, effective delay budget: 0.875ns).
+WARNING: [SCHED 204-21] The critical path in module 'matrix_multiply_top' consists of the following:
+	'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' [92]  (2.45 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.232 seconds; current allocated memory: 88.983 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.414 seconds; current allocated memory: 89.380 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_multiply_top_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_fadd_32ns_32ns_32_14_no_dsp_1' to 'matrix_multiply_tbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_fmul_32ns_32ns_32_8_max_dsp_1' to 'matrix_multiply_tcud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'matrix_multiply_tbkb': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matrix_multiply_tcud': 6 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_multiply_top_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.408 seconds; current allocated memory: 90.610 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_multiply_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_top/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_top/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_top/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrix_multiply_top' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_a_i' to 'matrix_multiply_tdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_b_i' to 'matrix_multiply_teOg' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_multiply_top'.
+INFO: [HLS 200-111]  Elapsed time: 1.293 seconds; current allocated memory: 91.931 MB.
+INFO: [RTMG 210-278] Implementing memory 'matrix_multiply_tdEe_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:00:38 . Memory (MB): peak = 147.348 ; gain = 63.457
+INFO: [SYSC 207-301] Generating SystemC RTL for matrix_multiply_top.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrix_multiply_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrix_multiply_top.
+INFO: [HLS 200-112] Total elapsed time: 38.327 seconds; peak allocated memory: 91.931 MB.
+==============================================================
+File generated on Wed Dec 19 00:18:55 -0200 2018
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 1ns.
+INFO: [HLS 200-10] Setting target device to 'xc7s75fgga676-2'
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_bind -effort=medium
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=none
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.125ns.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [HLS 200-10] Analyzing design file 'matrix_multiply.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:28 . Memory (MB): peak = 106.129 ; gain = 22.328
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:28 . Memory (MB): peak = 106.129 ; gain = 22.328
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:29 . Memory (MB): peak = 106.688 ; gain = 22.887
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'hls::NoTranspose::GetElement<3, 3, float>' into 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' into 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::matrix_multiply<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, float, float>' into 'matrix_multiply_top' (matrix_multiply.cpp:57) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:29 . Memory (MB): peak = 107.207 ; gain = 23.406
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'matrix_multiply_top' (matrix_multiply.cpp:36).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:296).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'b_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'b_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'a_row_loop' (matrix_multiply.cpp:45) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'a_col_loop' (matrix_multiply.cpp:46) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'b_row_loop' (matrix_multiply.cpp:50) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'b_col_loop' (matrix_multiply.cpp:51) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'c_row_loop' (matrix_multiply.cpp:60) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'c_col_loop' (matrix_multiply.cpp:61) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'a_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:318) in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'a_row_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:319) in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'b_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320) in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' completely with a factor of 3.
+WARNING: [XFORM 203-105] Cannot partition array 'b_i' (matrix_multiply.cpp:41): incorrect partition factor 1.
+WARNING: [XFORM 203-105] Cannot partition array 'c_i' : incorrect partition factor 1.
+WARNING: [XFORM 203-105] Cannot partition array 'sum_mult' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312): incorrect partition factor 1.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult.0' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult.1' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult.2' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i.2' automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::NoTranspose::GetElement<3, 3, float>' into 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' into 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::matrix_multiply<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, float, float>' into 'matrix_multiply_top' (matrix_multiply.cpp:57) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' into 'hls::matrix_multiply_top<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:30 . Memory (MB): peak = 128.699 ; gain = 44.898
+WARNING: [XFORM 203-631] Renaming function 'hls::matrix_multiply_top<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' to 'matrix_multiply_top.1' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:60:3)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:30 . Memory (MB): peak = 129.211 ; gain = 45.410
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrix_multiply_top' ...
+WARNING: [SYN 201-103] Legalizing function name 'matrix_multiply_top.1' to 'matrix_multiply_top_1'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_multiply_top_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated delay (2.45ns) of 'fadd' operation ('tmp', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) exceeds the target cycle time (target cycle time: 1ns, clock uncertainty: 0.125ns, effective cycle time: 0.875ns).
+INFO: [SCHED 204-61] Pipelining function 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('B_load_5', D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:325->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) on array 'B' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'B'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('A_load', D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) on array 'A' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'A'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 44.
+WARNING: [SCHED 204-21] Estimated clock period (2.451ns) exceeds the target (target clock period: 1ns, clock uncertainty: 0.125ns, effective delay budget: 0.875ns).
+WARNING: [SCHED 204-21] The critical path in module 'matrix_multiply_top_1' consists of the following:
+	'fadd' operation ('tmp', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) [55]  (2.45 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 30.974 seconds; current allocated memory: 87.628 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.592 seconds; current allocated memory: 88.579 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_multiply_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated delay (1.54ns) of 'load' operation ('A_load', matrix_multiply.cpp:47) on array 'A' exceeds the target cycle time (target cycle time: 1ns, clock uncertainty: 0.125ns, effective cycle time: 0.875ns).
+INFO: [SCHED 204-61] Pipelining function 'matrix_multiply_top'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 6 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 7 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 8 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 9 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 10, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 11 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 12 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 13 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 14 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 16 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 17 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 18 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 19 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 20, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 21 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 22 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 23 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 24 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 38 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 39 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 40, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 41 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 42 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 43 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('A_load_7', matrix_multiply.cpp:47) on array 'A' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'A'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 49, Depth = 56.
+WARNING: [SCHED 204-21] Estimated clock period (2.451ns) exceeds the target (target clock period: 1ns, clock uncertainty: 0.125ns, effective delay budget: 0.875ns).
+WARNING: [SCHED 204-21] The critical path in module 'matrix_multiply_top' consists of the following:
+	'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' [92]  (2.45 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.131 seconds; current allocated memory: 88.967 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.402 seconds; current allocated memory: 89.365 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_multiply_top_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_fadd_32ns_32ns_32_14_no_dsp_1' to 'matrix_multiply_tbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_fmul_32ns_32ns_32_8_max_dsp_1' to 'matrix_multiply_tcud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'matrix_multiply_tbkb': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matrix_multiply_tcud': 6 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_multiply_top_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.474 seconds; current allocated memory: 90.610 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_multiply_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_top/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_top/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_top/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrix_multiply_top' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_a_i' to 'matrix_multiply_tdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_b_i' to 'matrix_multiply_teOg' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_multiply_top'.
+INFO: [HLS 200-111]  Elapsed time: 1.349 seconds; current allocated memory: 91.931 MB.
+INFO: [RTMG 210-278] Implementing memory 'matrix_multiply_tdEe_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:00:38 . Memory (MB): peak = 147.559 ; gain = 63.758
+INFO: [SYSC 207-301] Generating SystemC RTL for matrix_multiply_top.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrix_multiply_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrix_multiply_top.
+INFO: [HLS 200-112] Total elapsed time: 37.808 seconds; peak allocated memory: 91.931 MB.
+==============================================================
+File generated on Wed Dec 19 00:20:02 -0200 2018
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 1ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.125ns.
+INFO: [HLS 200-10] Setting target device to 'xc7s75fgga676-2'
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=none
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [HLS 200-10] Analyzing design file 'matrix_multiply.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:29 . Memory (MB): peak = 106.051 ; gain = 22.277
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:29 . Memory (MB): peak = 106.051 ; gain = 22.277
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:30 . Memory (MB): peak = 106.770 ; gain = 22.996
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'hls::NoTranspose::GetElement<3, 3, float>' into 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' into 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::matrix_multiply<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, float, float>' into 'matrix_multiply_top' (matrix_multiply.cpp:57) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:30 . Memory (MB): peak = 107.297 ; gain = 23.523
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'matrix_multiply_top' (matrix_multiply.cpp:36).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:296).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'b_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'b_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'a_row_loop' (matrix_multiply.cpp:45) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'a_col_loop' (matrix_multiply.cpp:46) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'b_row_loop' (matrix_multiply.cpp:50) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'b_col_loop' (matrix_multiply.cpp:51) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'c_row_loop' (matrix_multiply.cpp:60) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'c_col_loop' (matrix_multiply.cpp:61) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'a_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:318) in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'a_row_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:319) in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'b_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320) in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' completely with a factor of 3.
+WARNING: [XFORM 203-105] Cannot partition array 'b_i' (matrix_multiply.cpp:41): incorrect partition factor 1.
+WARNING: [XFORM 203-105] Cannot partition array 'c_i' : incorrect partition factor 1.
+WARNING: [XFORM 203-105] Cannot partition array 'sum_mult' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312): incorrect partition factor 1.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult.0' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult.1' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult.2' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i.2' automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::NoTranspose::GetElement<3, 3, float>' into 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' into 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::matrix_multiply<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, float, float>' into 'matrix_multiply_top' (matrix_multiply.cpp:57) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' into 'hls::matrix_multiply_top<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:31 . Memory (MB): peak = 128.914 ; gain = 45.141
+WARNING: [XFORM 203-631] Renaming function 'hls::matrix_multiply_top<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' to 'matrix_multiply_top.1' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:60:3)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:31 . Memory (MB): peak = 129.168 ; gain = 45.395
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrix_multiply_top' ...
+WARNING: [SYN 201-103] Legalizing function name 'matrix_multiply_top.1' to 'matrix_multiply_top_1'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_multiply_top_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated delay (2.45ns) of 'fadd' operation ('tmp', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) exceeds the target cycle time (target cycle time: 1ns, clock uncertainty: 0.125ns, effective cycle time: 0.875ns).
+INFO: [SCHED 204-61] Pipelining function 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('B_load_5', D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:325->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) on array 'B' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'B'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('A_load', D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) on array 'A' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'A'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 44.
+WARNING: [SCHED 204-21] Estimated clock period (2.451ns) exceeds the target (target clock period: 1ns, clock uncertainty: 0.125ns, effective delay budget: 0.875ns).
+WARNING: [SCHED 204-21] The critical path in module 'matrix_multiply_top_1' consists of the following:
+	'fadd' operation ('tmp', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:335->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) [55]  (2.45 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 32.181 seconds; current allocated memory: 87.597 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.589 seconds; current allocated memory: 88.563 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_multiply_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated delay (1.54ns) of 'load' operation ('A_load', matrix_multiply.cpp:47) on array 'A' exceeds the target cycle time (target cycle time: 1ns, clock uncertainty: 0.125ns, effective cycle time: 0.875ns).
+INFO: [SCHED 204-61] Pipelining function 'matrix_multiply_top'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 6 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 7 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 8 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 9 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 10, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 11 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 12 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 13 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 14 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 16 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 17 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 18 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 19 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 20, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 21 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 22 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 23 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 24 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 38 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 39 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 40, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 41 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 42 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 43 is infeasible due to multiple pipeline iteration latency = 44 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('A_load_7', matrix_multiply.cpp:47) on array 'A' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'A'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 49, Depth = 56.
+WARNING: [SCHED 204-21] Estimated clock period (2.451ns) exceeds the target (target clock period: 1ns, clock uncertainty: 0.125ns, effective delay budget: 0.875ns).
+WARNING: [SCHED 204-21] The critical path in module 'matrix_multiply_top' consists of the following:
+	'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' [92]  (2.45 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.087 seconds; current allocated memory: 88.967 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.465 seconds; current allocated memory: 89.365 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_multiply_top_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_fadd_32ns_32ns_32_14_no_dsp_1' to 'matrix_multiply_tbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_fmul_32ns_32ns_32_8_max_dsp_1' to 'matrix_multiply_tcud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'matrix_multiply_tbkb': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matrix_multiply_tcud': 6 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_multiply_top_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.505 seconds; current allocated memory: 90.610 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_multiply_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_top/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_top/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_top/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrix_multiply_top' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_a_i' to 'matrix_multiply_tdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_b_i' to 'matrix_multiply_teOg' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_multiply_top'.
+INFO: [HLS 200-111]  Elapsed time: 1.32 seconds; current allocated memory: 91.931 MB.
+INFO: [RTMG 210-278] Implementing memory 'matrix_multiply_tdEe_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:00:39 . Memory (MB): peak = 147.453 ; gain = 63.680
+INFO: [SYSC 207-301] Generating SystemC RTL for matrix_multiply_top.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrix_multiply_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrix_multiply_top.
+INFO: [HLS 200-112] Total elapsed time: 39.182 seconds; peak allocated memory: 91.931 MB.
+==============================================================
+File generated on Wed Dec 19 00:32:10 -0200 2018
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 1ns.
+INFO: [HLS 200-10] Setting target device to 'xc7k70tfbv676-3'
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=none
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.125ns.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [HLS 200-10] Analyzing design file 'matrix_multiply.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:30 . Memory (MB): peak = 105.664 ; gain = 22.000
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:30 . Memory (MB): peak = 105.664 ; gain = 22.000
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:31 . Memory (MB): peak = 106.742 ; gain = 23.078
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'hls::NoTranspose::GetElement<3, 3, float>' into 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' into 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::matrix_multiply<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, float, float>' into 'matrix_multiply_top' (matrix_multiply.cpp:57) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:31 . Memory (MB): peak = 107.000 ; gain = 23.336
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'matrix_multiply_top' (matrix_multiply.cpp:36).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:296).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'b_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'b_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'a_row_loop' (matrix_multiply.cpp:45) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'a_col_loop' (matrix_multiply.cpp:46) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'b_row_loop' (matrix_multiply.cpp:50) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'b_col_loop' (matrix_multiply.cpp:51) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'c_row_loop' (matrix_multiply.cpp:60) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'c_col_loop' (matrix_multiply.cpp:61) in function 'matrix_multiply_top' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'a_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:318) in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'a_row_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:319) in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'b_col_loop' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:320) in function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' completely with a factor of 3.
+WARNING: [XFORM 203-105] Cannot partition array 'b_i' (matrix_multiply.cpp:41): incorrect partition factor 1.
+WARNING: [XFORM 203-105] Cannot partition array 'c_i' : incorrect partition factor 1.
+WARNING: [XFORM 203-105] Cannot partition array 'sum_mult' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312): incorrect partition factor 1.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult.0' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult.1' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sum_mult.2' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:312) automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'C.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'c_i.2' automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::NoTranspose::GetElement<3, 3, float>' into 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' into 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::matrix_multiply<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, float, float>' into 'matrix_multiply_top' (matrix_multiply.cpp:57) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::matrix_multiply_alt2<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' into 'hls::matrix_multiply_top<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:32 . Memory (MB): peak = 128.590 ; gain = 44.926
+WARNING: [XFORM 203-631] Renaming function 'hls::matrix_multiply_top<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' to 'matrix_multiply_top.1' (D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:60:3)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:32 . Memory (MB): peak = 129.098 ; gain = 45.434
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrix_multiply_top' ...
+WARNING: [SYN 201-103] Legalizing function name 'matrix_multiply_top.1' to 'matrix_multiply_top_1'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_multiply_top_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated delay (1.53ns) of 'fmul' operation ('sum_mult[0][0]', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:326->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) exceeds the target cycle time (target cycle time: 1ns, clock uncertainty: 0.125ns, effective cycle time: 0.875ns).
+INFO: [SCHED 204-61] Pipelining function 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('B_load_5', D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:325->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) on array 'B' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'B'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('A_load', D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:60->D:/Xilinx/Vivado/2018.3/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:324->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) on array 'A' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'A'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 46.
+WARNING: [SCHED 204-21] Estimated clock period (1.534ns) exceeds the target (target clock period: 1ns, clock uncertainty: 0.125ns, effective delay budget: 0.875ns).
+WARNING: [SCHED 204-21] The critical path in module 'matrix_multiply_top_1' consists of the following:
+	'fmul' operation ('mult_1_i', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:326->D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:511) [39]  (1.53 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 32.806 seconds; current allocated memory: 87.685 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.777 seconds; current allocated memory: 88.703 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_multiply_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'matrix_multiply_top'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 6 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 7 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 8 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 9 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 10, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 11 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 12 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 13 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 14 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 16 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 17 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 18 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 19 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 20, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 21 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 22 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 23 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 24 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 38 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 39 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrix_multiply_top': Unable to enforce a carried dependence constraint (II = 40, distance = 1, offset = 1)
+   between 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' and 'store' operation (matrix_multiply.cpp:47) of variable 'A_load', matrix_multiply.cpp:47 on array 'a_i', matrix_multiply.cpp:40.
+WARNING: [SCHED 204-62] II = 41 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 42 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 43 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-62] II = 44 is infeasible due to multiple pipeline iteration latency = 46 and incompatible II = 5 of 'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('A_load_8', matrix_multiply.cpp:47) on array 'A' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'A'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 51, Depth = 58.
+WARNING: [SCHED 204-21] Estimated clock period (1.523ns) exceeds the target (target clock period: 1ns, clock uncertainty: 0.125ns, effective delay budget: 0.875ns).
+WARNING: [SCHED 204-21] The critical path in module 'matrix_multiply_top' consists of the following:
+	'call' operation ('call_ret_i1', D:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:560->matrix_multiply.cpp:57) to 'matrix_multiply_top.1' [92]  (1.52 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.198 seconds; current allocated memory: 89.128 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.387 seconds; current allocated memory: 89.529 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_multiply_top_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_fadd_32ns_32ns_32_14_no_dsp_1' to 'matrix_multiply_tbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_fmul_32ns_32ns_32_10_full_dsp_1' to 'matrix_multiply_tcud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'matrix_multiply_tbkb': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matrix_multiply_tcud': 6 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_multiply_top_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.594 seconds; current allocated memory: 90.749 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_multiply_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_top/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_top/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_top/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrix_multiply_top' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_a_i' to 'matrix_multiply_tdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrix_multiply_top_b_i' to 'matrix_multiply_teOg' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_multiply_top'.
+INFO: [HLS 200-111]  Elapsed time: 1.44 seconds; current allocated memory: 92.087 MB.
+INFO: [RTMG 210-278] Implementing memory 'matrix_multiply_tdEe_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:00:40 . Memory (MB): peak = 147.844 ; gain = 64.180
+INFO: [SYSC 207-301] Generating SystemC RTL for matrix_multiply_top.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrix_multiply_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrix_multiply_top.
+INFO: [HLS 200-112] Total elapsed time: 40.312 seconds; peak allocated memory: 92.087 MB.
